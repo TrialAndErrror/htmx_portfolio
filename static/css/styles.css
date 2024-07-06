@@ -1,8 +1,47 @@
 :root {
+    /* Primary Color */
     --bs-primary: #b7d6a8;
     --bs-primary-rgb: 183, 214, 168;
+
+    /* Secondary Color */
+    --bs-secondary: #343a40;
+    --bs-secondary-rgb: 52, 58, 64;
+
+    /* Link Color */
+    --bs-link-color: rgba(255, 255, 255, 0.5);
+    --bs-link-hover-color: rgba(255, 255, 255, 0.75);
+
+    /* Custom Colors */
+    --bright-green: #77a360;
+    --dull-green: #2d5727;
+}
+
+.btn-secondary {
+	--bs-btn-color: var(--bright-green);
+	--bs-btn-bg: var(--bs-secondary);
+	--bs-btn-border-color: var(--bright-green);
+	--bs-btn-hover-color: #fff;
+	--bs-btn-hover-bg: var(--dull-green);
+	--bs-btn-hover-border-color: #000;
+	--bs-btn-focus-shadow-rgb: 130,138,145;
+	--bs-btn-active-color: #fff;
+	--bs-btn-active-bg: var(--dull-green);
+	--bs-btn-active-border-color: #000;
+	--bs-btn-active-hadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+h1 {
+	font-size: calc(4rem + 1.5vw);
 }
 
 .title-shadow {
-	text-shadow: 2px 2px 2px #77a360, 4px 4px 2px #77a360;
+	text-shadow: 2px 2px 2px var(--bright-green), 4px 4px 2px var(--bright-green);
+}
+
+.lead {
+    font-size: 2rem;
+}
+
+.misspelled {
+    text-decoration: underline red wavy;
 }
