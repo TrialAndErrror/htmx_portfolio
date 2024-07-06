@@ -1,0 +1,8 @@
+:root {
+    --bs-primary: #b7d6a8;
+    --bs-primary-rgb: 183, 214, 168;
+}
+
+.title-shadow {
+	text-shadow: 2px 2px 2px #77a360, 4px 4px 2px #77a360;
+}
