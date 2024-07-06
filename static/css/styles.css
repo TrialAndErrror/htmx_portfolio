@@ -17,7 +17,7 @@
 }
 
 .btn-secondary {
-	--bs-btn-color: var(--bright-green);
+	--bs-btn-color: #fff;
 	--bs-btn-bg: var(--bs-secondary);
 	--bs-btn-border-color: var(--bright-green);
 	--bs-btn-hover-color: #fff;
@@ -28,6 +28,19 @@
 	--bs-btn-active-bg: var(--dull-green);
 	--bs-btn-active-border-color: #000;
 	--bs-btn-active-hadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+
+/* Cover Styles */
+.cover {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.cover-image {
+    width: 25rem;
+    height: 25rem;
 }
 
 h1 {
@@ -44,4 +57,19 @@ h1 {
 
 .misspelled {
     text-decoration: underline red wavy;
+}
+
+
+/* Nav Styles */
+.nav {
+    margin-left: auto;
+}
+
+.masthead-brand {
+    color: #fff;
+}
+
+.nav-logo {
+    margin-left: 1.5rem;
+    margin-right: 1rem;
 }
