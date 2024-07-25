@@ -57,8 +57,9 @@ h1 {
 	text-shadow: 2px 2px 2px var(--bright-green), 4px 4px 2px var(--bright-green);
 }
 
-.lead {
+p {
     font-size: 2rem;
+    font-weight: 300;
 }
 
 .misspelled {
@@ -83,4 +84,16 @@ h1 {
 a {
     color: #1a1d20;
     font-weight: 600;
+}
+
+.standout {
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.footer-text {
+    color: #fff;
+    margin: 0.5rem 0;
+    text-align: center;
+    font-size: 1.5rem;
 }
