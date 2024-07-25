@@ -30,7 +30,11 @@
 	--bs-btn-active-hadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
 
-
+.navbar-nav {
+    --bs-navbar-active-color: rgba(255, 255, 255, 0.9);
+    --bs-navbar-color: rgba(255, 255, 255, 0.5);
+    font-weight: bold;
+}
 /* Cover Styles */
 .cover {
     display: flex;
@@ -45,6 +49,8 @@
 
 h1 {
 	font-size: calc(4rem + 1.5vw);
+    margin-top: 7rem;
+    margin-bottom: 4rem;
 }
 
 .title-shadow {
@@ -72,4 +78,9 @@ h1 {
 .nav-logo {
     margin-left: 1.5rem;
     margin-right: 1rem;
+}
+
+a {
+    color: #1a1d20;
+    font-weight: 600;
 }
