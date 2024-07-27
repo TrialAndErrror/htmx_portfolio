@@ -35,7 +35,7 @@ h3 {
     height: 20rem;
 }
 
-img {
+img.img-fluid {
     border: 8px solid black;
     border-radius: 1rem;
 }

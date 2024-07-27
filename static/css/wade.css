@@ -1,0 +1,16 @@
+/* Cover Styles */
+.cover {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.cover-image {
+    width: 25rem;
+    height: 25rem;
+}
+
+.cover-subtext {
+    font-size: 2rem;
+    font-weight: 300;
+}
