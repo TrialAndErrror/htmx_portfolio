@@ -13,9 +13,29 @@
 }
 
 h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-decoration: underline;
+}
+
+h3 {
     text-align: center;
 }
 
 .row {
     margin-bottom: 3rem;
+}
+
+.attribution {
+    font-size: 1rem;
+}
+
+.screenshot {
+    height: 20rem;
+}
+
+img {
+    border: 8px solid black;
+    border-radius: 1rem;
 }
