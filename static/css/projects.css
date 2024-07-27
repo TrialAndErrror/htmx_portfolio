@@ -1,0 +1,21 @@
+.view-link {
+    margin-top: 1rem;
+    width: fit-content;
+    padding: 0.5rem 0.75rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.github-logo, .binder-logo {
+    width: 1.5rem;
+    height: 1.5rem
+}
+
+h2 {
+    text-align: center;
+}
+
+.row {
+    margin-bottom: 3rem;
+}
