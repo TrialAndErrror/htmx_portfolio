@@ -18,6 +18,10 @@
             rel="stylesheet"
             href="/static/css/styles.css"
     />
+        <link
+            rel="stylesheet"
+            href="/static/css/projects.css"
+    />
 
 </head>
 
@@ -46,10 +50,10 @@
                 <div class="collapse navbar-collapse">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/about.html">About</a>
+                            <a class="nav-link" aria-current="page" href="/about.html">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="/projects.html">Projects</a>
+                            <a class="nav-link active" aria-current="page" href="/projects.html">Projects</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="#">Meet Wade</a>
@@ -65,29 +69,36 @@
 
     <!-- Page Content -->
     <main role="main" class="cover container">
-        <h1 class="title-shadow text-center">Recent Projects</span></h1>
+        <h1 class="title-shadow text-center">Projects</span></h1>
 
         <div class="row">
             <div class="col-12">
-                <div class="float-start m-5">
+                <div class="float-start m-5 d-flex flex-column align-items-center">
                     <img
                             alt="Photograph of a calculator and some money to illustrate the purpose of the Money Manager project"
                             src="/static/images/moneymanager.webp"
                             class="img-fluid"
                     >
-                    <div class="view-link">
-                        <a href="https://github.com/TrialAndErrror/djangoMM" target="_blank" rel="noreferrer">
-                            <img src="static/images/github-mark/github-mark.svg" alt="GitHub logo icon" class="me-2" style="width: 1.5rem; height: 1.5rem"/>
-                            View on Github
-                        </a>
-                    </div>
+                    <a
+                            class="btn btn-dark view-link"
+                            href="https://github.com/TrialAndErrror/djangoMM"
+                            target="_blank"
+                            rel="noreferrer"
+                    >
+                        <img
+                                src="static/images/github-mark/github-mark-white.svg"
+                                alt="GitHub logo icon"
+                                class="me-2 github-logo"
+                        />
+                        View on Github
+                    </a>
                 </div>
 
 
                 <h2>Money Manager</h2>
                 <p>
                     Money Manager is an online platform for keeping track of bills, analyzing your expenditures,
-                    and generally managing your money. As you add expenses and pay bills, Money Manager will keep \
+                    and generally managing your money. As you add expenses and pay bills, Money Manager will keep
                     track of how much money is in each of your accounts.
                 </p>
                 <p>
@@ -100,18 +111,25 @@
 
         <div class="row">
             <div class="col-12">
-                <div class="float-end m-5">
+                <div class="float-end m-5 d-flex flex-column align-items-center">
                     <img
                             alt="Photograph of a cat and some money to illustrate the purpose of the Cat Faces Detector project"
                             src="/static/images/faces.webp"
                             class="img-fluid"
                     >
-                    <div class="view-link text-end">
-                        <a href="https://mybinder.org/v2/gh/TrialAndErrror/ai_colab/HEAD?urlpath=%2Fvoila%2Frender%2FMurrs-voila.ipynb"
-                           target="_blank" rel="noreferrer">
-                            View on Binder
-                        </a>
-                    </div>
+                    <a
+                            class="btn btn-dark view-link"
+                            href="https://mybinder.org/v2/gh/TrialAndErrror/ai_colab/HEAD?urlpath=%2Fvoila%2Frender%2FMurrs-voila.ipynb"
+                            target="_blank"
+                            rel="noreferrer"
+                    >
+                                                <img
+                                src="static/images/binder-icon.png"
+                                alt="MyBinder logo icon"
+                                class="binder-logo"
+                        />
+                        View on Binder
+                    </a>
 
                 </div>
 
@@ -131,17 +149,25 @@
 
         <div class="row">
             <div class="col-12">
-                <div class="float-start m-5">
+                <div class="float-start m-5 d-flex flex-column align-items-center">
                     <img
                             alt="Photograph of a cat sitting on a lap to illustrate the concept of a cat as your Assistant"
                             src="/static/images/assistant.webp"
                             class="img-fluid"
                     >
-                    <div class="view-link">
-                        <a href="https://github.com/TrialAndErrror/TnE_Assistant" target="_blank" rel="noreferrer">
-                            View on GitHub
-                        </a>
-                    </div>
+                    <a
+                            class="btn btn-dark view-link"
+                            href="https://github.com/TrialAndErrror/TnE_Assistant"
+                            target="_blank"
+                            rel="noreferrer"
+                    >
+                        <img
+                                src="static/images/github-mark/github-mark-white.svg"
+                                alt="GitHub logo icon"
+                                class="me-2 github-logo"
+                        />
+                        View on GitHub
+                    </a>
                 </div>
 
                 <h2>TnE Assistant</h2>
@@ -158,17 +184,22 @@
 
         <div class="row">
             <div class="col-12">
-                <div class="float-end m-5">
+                <div class="float-end m-5 d-flex flex-column align-items-center">
                     <img
                             alt="Photograph of a dog to illustrate the concept of the Fetcher project"
                             src="/static/images/fetcher.webp"
                             class="img-fluid"
                     >
-                    <div class="view-link text-end">
-                        <a href="https://github.com/TrialAndErrror/Fetcher" target="_blank" rel="noreferrer">
-                            View on GitHub
-                        </a>
-                    </div>
+                    <a
+                            class="btn btn-dark view-link"
+                            href="https://github.com/TrialAndErrror/Fetcher" target="_blank" rel="noreferrer">
+                        <img
+                                src="static/images/github-mark/github-mark-white.svg"
+                                alt="GitHub logo icon"
+                                class="me-2 github-logo"
+                        />
+                        View on GitHub
+                    </a>
                 </div>
 
 
