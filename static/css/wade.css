@@ -14,3 +14,48 @@
     font-size: 2rem;
     font-weight: 300;
 }
+
+h2 {
+    font-size: 3rem;
+}
+
+h2.masthead-brand {
+    margin-top: 0;
+}
+
+.job-info {
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.job-info p {
+    margin-bottom: 0;
+}
+
+.job-info div {
+    display: flex;
+}
+
+.employer {
+    font-size: 1.5rem;
+}
+
+.date-range {
+    font-size: 1.5rem;
+}
+
+.job-title {
+    font-weight: 600;
+}
+
+.location {
+    font-size: 1.5rem;
+
+}
+
+.print-button {
+    border: 6px solid black;
+    border-radius: 1rem;
+    background-color: #06bd6b;
+    box-shadow: 3px 4px 4px #65822b;
+}
