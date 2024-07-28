@@ -15,13 +15,14 @@
     font-weight: 300;
 }
 
+h1 {
+    margin-top: 7rem;
+    margin-bottom: 4rem;
+}
+
 h2 {
     font-size: 3rem;
     margin-top: 2rem;
-}
-
-h2.masthead-brand {
-    margin-top: 0;
 }
 
 .job-info {
@@ -61,4 +62,8 @@ h2.masthead-brand {
     border-radius: 1rem;
     background-color: #06bd6b;
     box-shadow: 3px 4px 4px #65822b;
+}
+
+.intro-panel {
+    margin-bottom: 6rem;
 }
