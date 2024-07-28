@@ -55,6 +55,8 @@ h2.masthead-brand {
 }
 
 .print-button {
+    font-size: 3rem;
+    font-weight: 500;
     border: 6px solid black;
     border-radius: 1rem;
     background-color: #06bd6b;
