@@ -28,6 +28,7 @@ h2 {
 .job-info {
     gap: 1rem;
     margin-top: 1.5rem;
+    border-bottom: 1px solid black;
 }
 
 .job-info p {
