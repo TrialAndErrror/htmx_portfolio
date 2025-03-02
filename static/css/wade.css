@@ -69,23 +69,19 @@ h2 {
 .skills-section {
     font-size: 1.5rem;
 }
-
-/* Large desktops (1200px and up) */
-@media (min-width: 1200px) {
-}
-
-/* Small desktops (850px - 1199px) */
-@media (min-width: 850px) and (max-width: 1199px) {
-}
-
-/* Tablets (600px - 849px) */
-@media (min-width: 600px) and (max-width: 849px) {
-}
-
-/* Large phones (400px - 599px) */
-@media (min-width: 400px) and (max-width: 599px) {
-}
-
 /* Small phones (below 400px) */
-@media (max-width: 399px) {
+@media (min-width: 1px) {
+ }
+/* Large phones (400px+) */
+@media (min-width: 400px) {
+}
+/* Tablets (600px+) */
+@media (min-width: 600px) {
+}
+
+/* Small desktops (850px+) */
+@media (min-width: 850px) {
+}
+/* Large desktops (1200px+) */
+@media (min-width: 1200px) {
 }

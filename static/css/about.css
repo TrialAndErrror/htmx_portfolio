@@ -16,50 +16,8 @@
     font-weight: 600;
 }
 
-.video-card {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 2rem;
-    padding-bottom: 3rem;
-}
-
-.thumbnail {
-    border: 2px solid black;
-    border-radius: 1rem;
-    padding: 2rem;
-    background-color: black;
-}
-
-/* Large desktops (1200px and up) */
-@media (min-width: 1200px) {
-    :root {
-        --image-size: 13rem;
-    }
-}
-
-/* Small desktops (850px - 1199px) */
-@media (min-width: 850px) and (max-width: 1199px) {
-    :root {
-        --image-size: 11.3rem;
-    }
-}
-
-/* Tablets (600px - 849px) */
-@media (min-width: 600px) and (max-width: 849px) {
-    :root {
-        --image-size: 9rem;
-    }
-}
-
-/* Large phones (400px - 599px) */
-@media (min-width: 400px) and (max-width: 599px) {
-    :root {
-        --image-size: 7rem;
-    }
-}
-
 /* Small phones (below 400px) */
-@media (max-width: 399px) {
+@media (min-width: 1px) {
     :root {
         --image-size: 15rem;
     }
@@ -68,6 +26,46 @@
         padding-bottom: 1rem;
     }
     .thumbnail {
-        padding: 0 0.5rem
+        padding: 0 0.5rem;
+    }
+}
+
+/* Large phones (400px+) */
+@media (min-width: 400px) {
+    :root {
+        --image-size: 7rem;
+    }
+}
+/* Tablets (600px+) */
+@media (min-width: 600px) {
+    :root {
+        --image-size: 9rem;
+    }
+}
+
+/* Small desktops (850px+) */
+@media (min-width: 850px) {
+    :root {
+        --image-size: 11.3rem;
+    }
+    .video-card {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 2rem;
+        padding-bottom: 3rem;
+    }
+
+    .thumbnail {
+        border: 2px solid black;
+        border-radius: 1rem;
+        padding: 2rem;
+        background-color: black;
+    }
+}
+
+/* Large desktops (1200px+) */
+@media (min-width: 1200px) {
+    :root {
+        --image-size: 13rem;
     }
 }

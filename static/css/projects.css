@@ -1,5 +1,4 @@
 .view-link {
-    margin-top: 1rem;
     width: fit-content;
     padding: 0.5rem 0.75rem;
     display: flex;
@@ -12,27 +11,8 @@
     height: 1.5rem
 }
 
-h2 {
-    font-size: 3rem;
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-    text-decoration: underline;
-}
-
-h3 {
-    text-align: center;
-}
-
-.row {
-    margin-bottom: 3rem;
-}
-
 .attribution {
     font-size: 1rem;
-}
-
-.screenshot {
-    height: 20rem;
 }
 
 img.img-fluid {
@@ -40,22 +20,41 @@ img.img-fluid {
     border-radius: 1rem;
 }
 
-/* Large desktops (1200px and up) */
-@media (min-width: 1200px) {
+.personal-project-image {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%
 }
 
-/* Small desktops (850px - 1199px) */
-@media (min-width: 850px) and (max-width: 1199px) {
-}
-
-/* Tablets (600px - 849px) */
-@media (min-width: 600px) and (max-width: 849px) {
-}
-
-/* Large phones (400px - 599px) */
-@media (min-width: 400px) and (max-width: 599px) {
-}
 
 /* Small phones (below 400px) */
-@media (max-width: 399px) {
+@media (min-width: 1px) {
+ }
+/* Large phones (400px+) */
+@media (min-width: 400px) {
+}
+/* Tablets (600px+) */
+@media (min-width: 600px) {
+    .personal-project-image {
+        float: left !important;
+    }
+
+    .personal-project-text {
+        height: 100%;
+    }
+
+}
+
+/* Small desktops (850px+) */
+@media (min-width: 850px) {
+    .img-fluid {
+        max-width: 60rem;
+    }
+
+}
+/* Large desktops (1200px+) */
+@media (min-width: 1200px) {
 }
