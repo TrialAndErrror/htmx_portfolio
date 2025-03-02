@@ -1,7 +1,3 @@
-:root {
-    --image-size: 11.3rem; /* Default size at 850px width */
-}
-
 /* Base logo styling */
 .logo {
 }
@@ -16,6 +12,13 @@
     font-weight: 600;
 }
 
+.thumbnail {
+    border: 2px solid black;
+    border-radius: 1rem;
+    padding: 0 1rem;
+    background-color: black;
+}
+
 /* Small phones (below 400px) */
 @media (min-width: 1px) {
     :root {
@@ -25,9 +28,6 @@
         padding-top: 1rem;
         padding-bottom: 1rem;
     }
-    .thumbnail {
-        padding: 0 0.5rem;
-    }
 }
 
 /* Large phones (400px+) */
@@ -35,12 +35,22 @@
     :root {
         --image-size: 7rem;
     }
+    p {
+        text-align: left;
+    }
 }
 /* Tablets (600px+) */
 @media (min-width: 600px) {
     :root {
         --image-size: 9rem;
     }
+    .row {
+        margin-bottom: 1.5rem;
+    }
+    .thumbnail {
+        padding: 0 1rem;
+    }
+
 }
 
 /* Small desktops (850px+) */
@@ -53,13 +63,6 @@
         padding-right: 1rem;
         padding-top: 2rem;
         padding-bottom: 3rem;
-    }
-
-    .thumbnail {
-        border: 2px solid black;
-        border-radius: 1rem;
-        padding: 2rem;
-        background-color: black;
     }
 }
 

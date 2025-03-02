@@ -84,15 +84,16 @@
       <main role="main" class="cover container">
         <h1 class="title-shadow text-center">Projects</h1>
 
-        <h2>Professional Projects</h2>
+        <h2 class="mb-4 mb-md-5">Professional Projects</h2>
 
         <div class="row">
           <div class="col-12">
-            <div class="float-start m-5 d-flex flex-column align-items-center">
+            <div class="my-4 mb-md-5 d-flex flex-column align-items-center">
+              <h3>CMG Inventory</h3>
               <img
                 alt="Screenshot of a the user interface for the CMG Inventory application"
                 src="/static/images/cmg.webp"
-                class="img-fluid screenshot"
+                class="img-fluid professional-project-image my-4"
               />
               <a
                 class="btn btn-dark view-link"
@@ -109,7 +110,6 @@
               </a>
             </div>
 
-            <h3>CMG Inventory</h3>
             <p>
               CMG Inventory is an application for tracking and managing
               warehouse inventory. Built for a commercial greenhouse client,
@@ -130,11 +130,14 @@
 
         <div class="row">
           <div class="col-12">
-            <div class="float-end m-5 d-flex flex-column align-items-center">
+            <div
+              class="my-4 mt-mb-0 mb-md-5 d-flex flex-column align-items-center"
+            >
+              <h3>PALS Haven</h3>
               <img
                 alt="Screenshot of a the user interface for the CMG Inventory application"
                 src="/static/images/pals.webp"
-                class="img-fluid screenshot"
+                class="img-fluid professional-project-image my-4"
               />
               <a
                 class="btn btn-dark view-link"
@@ -151,9 +154,8 @@
               </a>
             </div>
 
-            <h3>PALS Haven</h3>
             <p>
-              PALS Haven is an animal shelter in Lodi, California. Triel and
+              PALS Haven is an animal shelter in Lodi, California. Trial and
               Errror partnered with PALS Haven to renovate their website and
               enable them to manage information about pets, news, events, and
               other information about PALS Haven in an easy-to-use web
@@ -171,25 +173,15 @@
           </div>
         </div>
 
-        <h2>Personal Projects</h2>
+        <h2 class="m-5 mx-md-0">Personal Projects</h2>
 
         <div class="row">
           <div class="col-12">
-            <h3>Flask Microservices</h3>
-            <p>
-              Flask Microservices is an application built as an example of how
-              to use Flask to develop simple microservices that can work
-              together to achieve a desired goal. Built entirely in flask, I
-              developed my own system of messages that would communicate between
-              the services in a unified way and structured them to be run using
-              docker compose so that deployment and improvement of the
-              individual services would be as simple and painless as possible.
-            </p>
-            <div class="float-end m-5 d-flex flex-column align-items-center">
+            <div class="personal-project-image image-right">
               <img
                 alt="Photograph of a calculator and some money to illustrate the purpose of the Money Manager project"
-                src="/static/images/moneymanager.webp"
-                class="img-fluid"
+                src="/static/images/nervous_robot.webp"
+                class="img-fluid m-4"
               />
               <a
                 class="btn btn-dark view-link"
@@ -204,39 +196,66 @@
                 />
                 View on Github
               </a>
+              <a
+                class="btn btn-dark view-link mt-3"
+                href="https://write.as/thewadegreen/the-following-is-an-blog-post-that-i-wrote-while-working-for-a-previous"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  src="static/images/writefreely.svg"
+                  alt="Website icon"
+                  class="me-2 github-logo"
+                />
+                Read Blog Post
+              </a>
             </div>
-            <p>
-              The motivation behind the application was to build utilities that
-              would help my in my first years of being a father. One of my jobs
-              was to stay up until 2:00 a.m. so that I could mix powdered
-              formula with water to prepare food for my daughter for her
-              overnight feeds. Since it was difficult to remember the exact
-              ratios and calculate how to mix her feed, I developed a calculator
-              that would allow me to set parameters on the desired output and
-              let it calculate the exact mixture of powder to mix with water. I
-              then also developed utilities for tracking how much food she was
-              eating during the day and her water intake so that we could
-              monitor trends in her weight and tie it back to her specific
-              caloric intake and water consumption over a period of time, which
-              helped us to communicate with her nutritionist and develop a good
-              plan for her.
-            </p>
-            <p>
-              Each of these tools could be run separately as microservices with
-              their own databases so that I could work on each one individually
-              without affecting the other services and so that I could deploy
-              each service on its own or as part of the overall group.
-            </p>
+            <div class="personal-project-text">
+              <h3>Flask Microservices</h3>
+              <p>
+                Flask Microservices is an application built as an example of how
+                to use Flask to develop simple microservices that can work
+                together to achieve a desired goal. Built entirely in flask, I
+                developed my own system of messages that would communicate
+                between the services in a unified way and structured them to be
+                run using docker compose so that deployment and improvement of
+                the individual services would be as simple and painless as
+                possible.
+              </p>
+              <p>
+                The motivation behind the application was to build utilities
+                that would help my in my first years of being a father. One of
+                my jobs was to stay up until 2:00 a.m. so that I could mix
+                powdered formula with water to prepare food for my daughter for
+                her overnight feeds. Since it was difficult to remember the
+                exact ratios and calculate how to mix her feed, I developed a
+                calculator that would allow me to set parameters on the desired
+                output and let it calculate the exact mixture of powder to mix
+                with water. I then also developed utilities for tracking how
+                much food she was eating during the day and her water intake so
+                that we could monitor trends in her weight and tie it back to
+                her specific caloric intake and water consumption over a period
+                of time, which helped us to communicate with her nutritionist
+                and develop a good plan for her.
+              </p>
+              <p>
+                Each of these tools could be run separately as microservices
+                with their own databases so that I could work on each one
+                individually without affecting the other services and so that I
+                could deploy each service on its own or as part of the overall
+                group.
+              </p>
+            </div>
           </div>
         </div>
 
         <div class="row">
           <div class="col-12">
-            <div class="float-start m-5 d-flex flex-column align-items-center">
+            <div class="personal-project-image image-left">
               <img
                 alt="Photograph of a calculator and some money to illustrate the purpose of the Money Manager project"
                 src="/static/images/moneymanager.webp"
-                class="img-fluid"
+                class="img-fluid m-4"
               />
               <a
                 class="btn btn-dark view-link"
@@ -253,27 +272,29 @@
               </a>
             </div>
 
-            <h3>Money Manager</h3>
-            <p>
-              Money Manager is an application for keeping track of bills,
-              analyzing your expenditures, and generally managing your money. As
-              you add expenses and pay bills, Money Manager will keep track of
-              how much money is in each of your accounts.
-            </p>
-            <p>
-              Money Manager was built in Django with a Postgres database. Click
-              the links below to view the site or check out the code!
-            </p>
+            <div class="personal-project-text">
+              <h3>Money Manager</h3>
+              <p>
+                Money Manager is an application for keeping track of bills,
+                analyzing your expenditures, and generally managing your money.
+                As you add expenses and pay bills, Money Manager will keep track
+                of how much money is in each of your accounts.
+              </p>
+              <p>
+                Money Manager was built in Django with a Postgres database.
+                Click the links below to view the site or check out the code!
+              </p>
+            </div>
           </div>
         </div>
 
         <div class="row">
           <div class="col-12">
-            <div class="float-end m-5 d-flex flex-column align-items-center">
+            <div class="personal-project-image image-right">
               <img
                 alt="Photograph of a cat and some money to illustrate the purpose of the Cat Faces Detector project"
                 src="/static/images/faces.webp"
-                class="img-fluid"
+                class="img-fluid m-4"
               />
               <a
                 class="btn btn-dark view-link"
@@ -290,25 +311,28 @@
               </a>
             </div>
 
-            <h3>Cat Face Detector</h3>
-            <p>
-              Cat Face Detector is an Artificial Intelligence-based facial
-              recognition learning model trained to detect pictures of my cats.
-              You can upload a picture to the model, and it will tell you if it
-              thinks there is one of my cats in the photo, and which cat it is.
-              It may take a minute or two to load, because it is hosted on a
-              free platform, but the proof of concept is fun to play with!
-            </p>
+            <div class="personal-project-text">
+              <h3>Cat Face Detector</h3>
+              <p>
+                Cat Face Detector is an Artificial Intelligence-based facial
+                recognition learning model trained to detect pictures of my
+                cats. You can upload a picture to the model, and it will tell
+                you if it thinks there is one of my cats in the photo, and which
+                cat it is. It may take a minute or two to load, because it is
+                hosted on a free platform, but the proof of concept is fun to
+                play with!
+              </p>
+            </div>
           </div>
         </div>
 
         <div class="row">
           <div class="col-12">
-            <div class="float-start m-5 d-flex flex-column align-items-center">
+            <div class="personal-project-image image-left">
               <img
                 alt="Photograph of a cat sitting on a lap to illustrate the concept of a cat as your Assistant"
                 src="/static/images/assistant.webp"
-                class="img-fluid"
+                class="img-fluid m-4"
               />
               <a
                 class="btn btn-dark view-link"
@@ -325,25 +349,27 @@
               </a>
             </div>
 
-            <h3>TnE Assistant</h3>
-            <p>
-              Trial and Errror Assistant is a voice-activated interface that
-              allows you to quickly and efficiently access the information and
-              media across the web. You can use it to help play your favorite
-              media, look up information, and other everyday tasks! TnE
-              Assistant was designed as a privacy-conscious alternative to Voice
-              Assistant devices like Amazon Alexa and Google Assistant.
-            </p>
+            <div class="personal-project-text">
+              <h3>TnE Assistant</h3>
+              <p>
+                Trial and Errror Assistant is a voice-activated interface that
+                allows you to quickly and efficiently access the information and
+                media across the web. You can use it to help play your favorite
+                media, look up information, and other everyday tasks! TnE
+                Assistant was designed as a privacy-conscious alternative to
+                Voice Assistant devices like Amazon Alexa and Google Assistant.
+              </p>
+            </div>
           </div>
         </div>
 
         <div class="row">
           <div class="col-12">
-            <div class="float-end m-5 d-flex flex-column align-items-center">
+            <div class="personal-project-image image-right">
               <img
                 alt="Photograph of a dog to illustrate the concept of the Fetcher project"
                 src="/static/images/fetcher.webp"
-                class="img-fluid"
+                class="img-fluid m-4"
               />
               <a
                 class="btn btn-dark view-link"
@@ -360,16 +386,18 @@
               </a>
             </div>
 
-            <h3>Fetcher</h3>
-            <p>
-              Fetcher is a script created to enable local viewing of YouTube
-              videos. It includes error handling, code documentation, and
-              logging. The purpose of Fetcher is to demonstrate the principles
-              of clean code while also providing a useful tool. If you want to
-              watch videos without an internet connection, or watch high-quality
-              videos with a slow internet connection, this tool may be helpful
-              for you!
-            </p>
+            <div class="personal-project-text">
+              <h3>Fetcher</h3>
+              <p>
+                Fetcher is a script created to enable local viewing of YouTube
+                videos. It includes error handling, code documentation, and
+                logging. The purpose of Fetcher is to demonstrate the principles
+                of clean code while also providing a useful tool. If you want to
+                watch videos without an internet connection, or watch
+                high-quality videos with a slow internet connection, this tool
+                may be helpful for you!
+              </p>
+            </div>
           </div>
         </div>
       </main>

@@ -74,6 +74,9 @@ h2 {
  }
 /* Large phones (400px+) */
 @media (min-width: 400px) {
+    p {
+        text-align: left;
+    }
 }
 /* Tablets (600px+) */
 @media (min-width: 600px) {
