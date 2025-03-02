@@ -1,7 +1,35 @@
+:root {
+    --image-size: 11.3rem; /* Default size at 850px width */
+}
+
+/* Base logo styling */
+.logo {
+}
+
+.about-photo {
+    width: var(--image-size);
+    height: var(--image-size);
+}
+
 .standout {
     text-decoration: underline;
     font-weight: 600;
 }
+
+.video-card {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+.thumbnail {
+    border: 2px solid black;
+    border-radius: 1rem;
+    padding: 2rem;
+    background-color: black;
+}
+
 /* Large desktops (1200px and up) */
 @media (min-width: 1200px) {
     :root {
@@ -32,4 +60,14 @@
 
 /* Small phones (below 400px) */
 @media (max-width: 399px) {
+    :root {
+        --image-size: 15rem;
+    }
+    .video-card {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    .thumbnail {
+        padding: 0 0.5rem
+    }
 }
