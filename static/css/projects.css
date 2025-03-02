@@ -1,5 +1,4 @@
 .view-link {
-    margin-top: 1rem;
     width: fit-content;
     padding: 0.5rem 0.75rem;
     display: flex;
@@ -7,35 +6,60 @@
     align-items: center;
 }
 
-.github-logo, .binder-logo {
+.github-logo,
+.binder-logo {
     width: 1.5rem;
-    height: 1.5rem
-}
-
-h2 {
-    font-size: 3rem;
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-    text-decoration: underline;
-}
-
-h3 {
-    text-align: center;
-}
-
-.row {
-    margin-bottom: 3rem;
+    height: 1.5rem;
 }
 
 .attribution {
     font-size: 1rem;
 }
 
-.screenshot {
-    height: 20rem;
-}
-
 img.img-fluid {
     border: 8px solid black;
     border-radius: 1rem;
+}
+.personal-project-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+/* Small phones (below 400px) */
+@media (min-width: 1px) {
+}
+/* Large phones (400px+) */
+@media (min-width: 400px) {
+    p {
+        text-align: left;
+    }
+}
+/* Tablets (600px+) */
+@media (min-width: 600px) {
+    .personal-project-image.image-left {
+        float: left !important;
+    }
+    .personal-project-image.image-right {
+        float: right !important;
+    }
+
+    .personal-project-text *:first-child {
+        margin-top: 2rem;
+    }
+}
+
+/* Small desktops (850px+) */
+@media (min-width: 850px) {
+    .professional-project-image {
+        max-width: 60rem;
+    }
+    .personal-project-image .img-fluid {
+        max-width: 19rem;
+    }
+}
+/* Large desktops (1200px+) */
+@media (min-width: 1200px) {
 }
