@@ -62,7 +62,7 @@ h1 {
 }
 
 p {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 300;
 }
 
@@ -83,3 +83,25 @@ a {
     font-size: 1.5rem;
 }
 
+/* Large desktops (1200px and up) */
+@media (min-width: 1200px) {
+}
+
+/* Small desktops (850px - 1199px) */
+@media (min-width: 850px) and (max-width: 1199px) {
+}
+
+/* Tablets (600px - 849px) */
+@media (min-width: 600px) and (max-width: 849px) {
+}
+
+/* Large phones (400px - 599px) */
+@media (min-width: 400px) and (max-width: 599px) {
+}
+
+/* Small phones (below 400px) */
+@media (max-width: 399px) {
+    p {
+        font-size: 1.5rem;
+    }
+}

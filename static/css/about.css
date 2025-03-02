@@ -2,3 +2,34 @@
     text-decoration: underline;
     font-weight: 600;
 }
+/* Large desktops (1200px and up) */
+@media (min-width: 1200px) {
+    :root {
+        --image-size: 13rem;
+    }
+}
+
+/* Small desktops (850px - 1199px) */
+@media (min-width: 850px) and (max-width: 1199px) {
+    :root {
+        --image-size: 11.3rem;
+    }
+}
+
+/* Tablets (600px - 849px) */
+@media (min-width: 600px) and (max-width: 849px) {
+    :root {
+        --image-size: 9rem;
+    }
+}
+
+/* Large phones (400px - 599px) */
+@media (min-width: 400px) and (max-width: 599px) {
+    :root {
+        --image-size: 7rem;
+    }
+}
+
+/* Small phones (below 400px) */
+@media (max-width: 399px) {
+}
