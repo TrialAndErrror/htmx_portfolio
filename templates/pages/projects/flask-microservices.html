@@ -1,0 +1,75 @@
+{{define "flask-microservices"}}
+<div class="row">
+  <div class="col-12">
+    <div class="personal-project-image image-right">
+      <img
+        alt="Photograph of a calculator and some money to illustrate the purpose of the Money Manager project"
+        src="/images/nervous_robot.webp"
+        class="img-fluid m-4"
+      />
+      <a
+        class="btn btn-dark view-link"
+        href="https://github.com/TrialAndErrror/Flask-Microservices-Sample"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <img
+          src="static/images/github-mark/github-mark-white.svg"
+          alt="GitHub logo icon"
+          class="me-2 github-logo"
+        />
+        View on Github
+      </a>
+      <a
+        class="btn btn-dark view-link mt-3"
+        href="https://write.as/thewadegreen/the-following-is-an-blog-post-that-i-wrote-while-working-for-a-previous"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <img
+          src="static/images/writefreely.svg"
+          alt="Website icon"
+          class="me-2 github-logo"
+        />
+        Read Blog Post
+      </a>
+    </div>
+    <div class="personal-project-text">
+      <h3>Flask Microservices</h3>
+      <p>
+        Flask Microservices is an application built as an example of how
+        to use Flask to develop simple microservices that can work
+        together to achieve a desired goal. Built entirely in flask, I
+        developed my own system of messages that would communicate
+        between the services in a unified way and structured them to be
+        run using docker compose so that deployment and improvement of
+        the individual services would be as simple and painless as
+        possible.
+      </p>
+      <p>
+        The motivation behind the application was to build utilities
+        that would help my in my first years of being a father. One of
+        my jobs was to stay up until 2:00 a.m. so that I could mix
+        powdered formula with water to prepare food for my daughter for
+        her overnight feeds. Since it was difficult to remember the
+        exact ratios and calculate how to mix her feed, I developed a
+        calculator that would allow me to set parameters on the desired
+        output and let it calculate the exact mixture of powder to mix
+        with water. I then also developed utilities for tracking how
+        much food she was eating during the day and her water intake so
+        that we could monitor trends in her weight and tie it back to
+        her specific caloric intake and water consumption over a period
+        of time, which helped us to communicate with her nutritionist
+        and develop a good plan for her.
+      </p>
+      <p>
+        Each of these tools could be run separately as microservices
+        with their own databases so that I could work on each one
+        individually without affecting the other services and so that I
+        could deploy each service on its own or as part of the overall
+        group.
+      </p>
+    </div>
+  </div>
+</div>
+{{end}} 

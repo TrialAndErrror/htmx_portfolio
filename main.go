@@ -95,7 +95,7 @@ func buildSite() {
 	// Process each discovered page
 	for pageName, config := range discoveredPages {
 		// Parse the specific page template
-		pageTemplatePath := filepath.Join("pages", pageName+".html")
+		pageTemplatePath := filepath.Join("templates/pages", pageName+".html")
 
 		// Clone the base template and add the page template
 		combinedTemplate, err := baseTemplate.Clone()
@@ -109,6 +109,23 @@ func buildSite() {
 		if err != nil {
 			log.Printf("Error adding page template for %s: %v", pageName, err)
 			continue
+		}
+
+		// Add component templates if they exist for this page
+		componentDir := filepath.Join("templates/pages", pageName)
+		if _, err := os.Stat(componentDir); err == nil {
+			// Component directory exists, parse all component templates
+			componentFiles, err := filepath.Glob(filepath.Join(componentDir, "*.html"))
+			if err != nil {
+				log.Printf("Error finding component templates for %s: %v", pageName, err)
+			} else if len(componentFiles) > 0 {
+				combinedTemplate, err = combinedTemplate.ParseFiles(componentFiles...)
+				if err != nil {
+					log.Printf("Error adding component templates for %s: %v", pageName, err)
+				} else {
+					log.Printf("Added %d component templates for %s", len(componentFiles), pageName)
+				}
+			}
 		}
 
 		// Create output file
@@ -135,13 +152,13 @@ func buildSite() {
 func discoverPages() map[string]PageConfig {
 	discoveredPages := make(map[string]PageConfig)
 
-	// Read the pages directory
-	files, err := os.ReadDir("pages")
+	// Read the templates/pages directory
+	files, err := os.ReadDir("templates/pages")
 	if err != nil {
-		log.Fatal("Error reading pages directory:", err)
+		log.Fatal("Error reading templates/pages directory:", err)
 	}
 
-	// Process each HTML file in the pages directory
+	// Process each HTML file in the templates/pages directory
 	for _, file := range files {
 		if !file.IsDir() && strings.HasSuffix(file.Name(), ".html") {
 			pageName := strings.TrimSuffix(file.Name(), ".html")
