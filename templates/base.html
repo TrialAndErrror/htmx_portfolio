@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="{{.Description}}" />
+    <meta name="author" content="Trial and Errror" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <title>{{.Title}}</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/static/css/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="/static/css/styles.css" />
+    <link rel="stylesheet" href="/static/css/{{.CSS}}.css" />
+
+    <!-- Bootstrap JS -->
+    <script
+      src="/static/js/bootstrap/bootstrap.bundle.js"
+      type="text/javascript"
+    ></script>
+  </head>
+
+  <body>
+    <div class="cover-container bg-primary d-flex flex-column h-100 min-vh-100">
+      <!-- Navbar -->
+      <header class="mb-auto">
+        <nav class="navbar navbar-expand-lg bg-secondary">
+          <div class="container-fluid">
+            <a href="/" class="d-flex text-decoration-none align-items-center">
+              <img
+                alt="Small logo with cat face and the letters TnE"
+                src="/static/images/small_logo.webp"
+                class="nav-logo"
+                width="30"
+                height="30"
+              />
+              <div class="masthead-brand mb-0">Trial and Errror</div>
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarLinks"
+              aria-controls="navbarLinks"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+              class="collapse navbar-collapse text-end text-lg-center"
+              id="navbarLinks"
+            >
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link{{if eq .ActiveNav "about"}} active{{end}}" href="/about.html">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link{{if eq .ActiveNav "projects"}} active{{end}}" href="/projects.html">Projects</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link{{if eq .ActiveNav "wade"}} active{{end}}" href="/wade.html">Meet Wade</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <!-- Page Content -->
+      {{template "content" .}}
+
+      <!-- Footer -->
+      <footer class="mastfoot bg-secondary text-center">
+        <div class="inner">
+          <p class="footer-text">Created by TrialAndError. &copy; 2024</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html> 
