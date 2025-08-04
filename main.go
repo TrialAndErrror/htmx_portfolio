@@ -4,6 +4,7 @@ import (
 	"flag"
 	"fmt"
 	"html/template"
+	"io"
 	"log"
 	"net/http"
 	"os"
@@ -62,9 +63,16 @@ func main() {
 		// No flags detected, show help text
 		prompts := []string{
 			"Trial and Errror - Go Template Builder",
-			"Used to build the site from templates.",
+			"Used to build the site from templates into the dist/ directory.",
+			"",
+			"Build Process:",
+			"1. Creates dist/ directory if it doesn't exist",
+			"2. Compiles all HTML templates into dist/",
+			"3. Copies all static assets to dist/static/",
+			"4. Serves the site from dist/ directory",
+			"",
 			"Flags:",
-			"-serve: Start HTTP server after building",
+			"-serve: Start HTTP server after building (serves from dist/)",
 			"-port: Provide port for HTTP server (default: 8000)",
 		}
 
@@ -83,6 +91,11 @@ func main() {
 }
 
 func buildSite() {
+	// Create dist directory if it doesn't exist
+	if err := os.MkdirAll("dist", 0755); err != nil {
+		log.Fatal("Error creating dist directory:", err)
+	}
+
 	// Discover pages from the pages folder
 	discoveredPages := discoverPages()
 
@@ -128,10 +141,11 @@ func buildSite() {
 			}
 		}
 
-		// Create output file
-		outputFile, err := os.Create(pageName + ".html")
+		// Create output file in dist directory
+		outputPath := filepath.Join("dist", pageName+".html")
+		outputFile, err := os.Create(outputPath)
 		if err != nil {
-			log.Printf("Error creating %s.html: %v", pageName, err)
+			log.Printf("Error creating %s: %v", outputPath, err)
 			continue
 		}
 		defer outputFile.Close()
@@ -143,10 +157,15 @@ func buildSite() {
 			continue
 		}
 
-		log.Printf("Built %s.html", pageName)
+		log.Printf("Built %s", outputPath)
 	}
 
-	log.Println("Build complete!")
+	// Copy static assets to dist directory
+	if err := copyStaticAssets(); err != nil {
+		log.Printf("Error copying static assets: %v", err)
+	}
+
+	log.Println("Build complete! Site is ready in the dist/ directory.")
 }
 
 func discoverPages() map[string]PageConfig {
@@ -177,13 +196,71 @@ func discoverPages() map[string]PageConfig {
 	return discoveredPages
 }
 
+func copyStaticAssets() error {
+	// Copy static directory to dist/static
+	return copyDir("static", "dist/")
+}
+
+func copyDir(src, dst string) error {
+	// Create destination directory
+	if err := os.MkdirAll(dst, 0755); err != nil {
+		return err
+	}
+
+	// Read source directory
+	entries, err := os.ReadDir(src)
+	if err != nil {
+		return err
+	}
+
+	for _, entry := range entries {
+		srcPath := filepath.Join(src, entry.Name())
+		dstPath := filepath.Join(dst, entry.Name())
+
+		if entry.IsDir() {
+			// Recursively copy subdirectories
+			if err := copyDir(srcPath, dstPath); err != nil {
+				return err
+			}
+		} else {
+			// Copy files
+			if err := copyFile(srcPath, dstPath); err != nil {
+				return err
+			}
+		}
+	}
+
+	return nil
+}
+
+func copyFile(src, dst string) error {
+	// Open source file
+	srcFile, err := os.Open(src)
+	if err != nil {
+		return err
+	}
+	defer srcFile.Close()
+
+	// Create destination file
+	dstFile, err := os.Create(dst)
+	if err != nil {
+		return err
+	}
+	defer dstFile.Close()
+
+	// Copy content
+	_, err = io.Copy(dstFile, srcFile)
+	return err
+}
+
 func startServer(port string) {
 	serverAddress := fmt.Sprintf("http://localhost:%s", port)
 	log.Printf("Starting server at %s", serverAddress)
+	log.Printf("Serving from dist/ directory")
 	log.Printf("Press Ctrl+C to stop")
 
-	// Create file server for current directory
-	fs := http.FileServer(http.Dir("."))
+	// Create file server for dist directory
+	fs := http.FileServer(http.Dir("dist"))
 
 	// Start server
 	if err := http.ListenAndServe(fmt.Sprintf(":%s", port), fs); err != nil {
