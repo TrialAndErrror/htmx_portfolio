@@ -21,56 +21,6 @@ A modern, component-based portfolio website built with Go templates and HTMX. Th
 - **Git** (for version control)
 
 
-## Installation
-
-### Debian/Ubuntu
-
-```bash
-# Update package list
-sudo apt update
-
-# Install Go
-sudo apt install golang-go
-
-# Install Git
-sudo apt install git
-
-# Verify installation
-go version
-git --version
-```
-
-### Arch 
-
-```bash
-# Update package list
-sudo pacman -Syu
-
-# Install Go
-sudo pacman -S go
-
-# Install Git
-sudo pacman -S git
-
-# Verify installation
-go version
-git --version
-```
-
-### Clone and Setup
-
-```bash
-# Clone the repository
-git clone <repository-url>
-cd htmx_portfolio
-
-# Initialize Go modules (if not already done)
-go mod init htmx_portfolio
-
-# Build the project
-go run main.go 
-```
-
 ## Build Process
 
 ### Overview
@@ -210,28 +160,6 @@ htmx_portfolio/
     └── static/                # Copied static assets
 ```
 
-## Development Workflow
-
-### Adding New Pages
-
-1. Create a new template file in `templates/pages/`
-2. Define the `content` block with your page content
-3. Add page configuration to `main.go` if needed
-4. Build the project to generate the new page
-
-### Adding New Components
-
-1. Create a new component file in `templates/pages/{pageName}/`
-2. Define a unique template name for your component
-3. Include the component in your page template using `{{template "component-name" .}}`
-4. Build the project to include the new component
-
-### Modifying Existing Content
-
-1. Edit the appropriate template file
-2. Build the project to regenerate the HTML
-3. Test your changes locally
-
 ## Deployment
 
 ### Local Development
@@ -285,35 +213,5 @@ server {
 </VirtualHost>
 ```
 
-## Contributing
-
-### Development Setup
-
-1. Fork the repository
-2. Clone your fork locally
-3. Create a feature branch
-4. Make your changes
-5. Test your changes locally
-6. Submit a pull request
-
-### Code Style
-
-- Follow Go naming conventions
-- Use meaningful template names
-- Keep components focused and reusable
-- Document any complex template logic
-
-### Testing
-
-- Always test your changes locally before submitting
-- Verify that all pages build correctly
-- Check that static assets are properly served
-- Test responsive design on different screen sizes
-
-## License
-
-[Add your license information here]
-
 ## Contact
-
-[Add your contact information here] 
+mailto:coding@trialanderrror.com
