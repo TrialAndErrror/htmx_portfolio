@@ -28,7 +28,7 @@ help:
 # Build the site
 build:
 	@echo "🔨 Building site..."
-	go run main.go -build
+	go run main.go 
 	@echo "✅ Build complete!"
 
 # Clean generated files

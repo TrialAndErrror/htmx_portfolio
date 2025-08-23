@@ -59,30 +59,7 @@ func main() {
 	port := flag.String("port", "8000", "Port for HTTP server")
 	flag.Parse()
 
-	if flag.NFlag() == 0 {
-		// No flags detected, show help text
-		prompts := []string{
-			"Trial and Errror - Go Template Builder",
-			"Used to build the site from templates into the dist/ directory.",
-			"",
-			"Build Process:",
-			"1. Creates dist/ directory if it doesn't exist",
-			"2. Compiles all HTML templates into dist/",
-			"3. Copies all static assets to dist/static/",
-			"4. Serves the site from dist/ directory",
-			"",
-			"Flags:",
-			"-serve: Start HTTP server after building (serves from dist/)",
-			"-port: Provide port for HTTP server (default: 8000)",
-		}
-
-		for _, prompt := range prompts {
-			fmt.Println(prompt)
-		}
-		return
-	}
-
-	// Always build before serving
+	// Always build, whether serving or not
 	buildSite()
 	// Start server if requested
 	if *serve {
