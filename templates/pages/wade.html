@@ -1,0 +1,17 @@
+{{define "content"}}
+<main role="main" class="cover text-center">
+  {{template "header" .}}
+
+  <div class="pt-md-4 pt-xs-5">
+    <div class="container">
+      {{template "summary" .}}
+      {{template "skills" .}}
+      <div class="row">
+        {{template "professional-experience" .}}
+        {{template "education" .}}
+      </div>
+      {{template "print-button" .}}
+    </div>
+  </div>
+</main>
+{{end}} 

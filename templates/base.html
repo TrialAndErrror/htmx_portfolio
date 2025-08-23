@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <meta name="description" content="Trial and Errror - Web Development, Technical Consulting, and Video Content Development. Learn about our services and projects." />
+    <meta name="description" content="{{.Description}}" />
     <meta name="author" content="Trial and Errror" />
 
     <!-- Favicon -->
@@ -16,13 +16,12 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
 
-    <title>Trial and Errror - Home</title>
+    <title>{{.Title}}</title>
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="/static/css/bootstrap/bootstrap.min.css" />
-
     <link rel="stylesheet" href="/static/css/styles.css" />
-    <link rel="stylesheet" href="/static/css/index.css" />
+    <link rel="stylesheet" href="/static/css/{{.CSS}}.css" />
 
     <!-- Bootstrap JS -->
     <script
@@ -32,11 +31,9 @@
   </head>
 
   <body>
-    <div
-      class="cover-container bg-primary text-center d-flex flex-column h-100 min-vh-100"
-    >
+    <div class="cover-container bg-primary d-flex flex-column h-100 min-vh-100 justify-content-between">
       <!-- Navbar -->
-      <header class="mb-auto">
+      <header>
         <nav class="navbar navbar-expand-lg bg-secondary">
           <div class="container-fluid">
             <a href="/" class="d-flex text-decoration-none align-items-center">
@@ -66,19 +63,13 @@
             >
               <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                  <a class="nav-link" href="/about.html"
-                    >About</a
-                  >
+                  <a class="nav-link{{if eq .ActiveNav "about"}} active{{end}}" href="/about.html">About</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/projects.html"
-                    >Projects</a
-                  >
+                  <a class="nav-link{{if eq .ActiveNav "projects"}} active{{end}}" href="/projects.html">Projects</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/wade.html"
-                    >Meet Wade</a
-                  >
+                  <a class="nav-link{{if eq .ActiveNav "wade"}} active{{end}}" href="/wade.html">Meet Wade</a>
                 </li>
               </ul>
             </div>
@@ -87,26 +78,14 @@
       </header>
 
       <!-- Page Content -->
-      <main role="main" class="cover">
-        <h1 class="title-shadow">
-          Trial and <span class="misspelled">Errror</span>
-        </h1>
-        <img
-          alt="Large logo with cat face and the letters TnE"
-          src="/static/images/logo_square.webp"
-          class="cover-image mx-auto"
-        />
-        <p>Everyone makes mistakes; it's your job to learn from them.</p>
-        <p>
-          <a href="/about.html" class="btn btn-lg btn-secondary">Learn more</a>
-        </p>
-      </main>
+      {{template "content" .}}
 
-      <footer class="mastfoot bg-secondary mt-auto">
+      <!-- Footer -->
+      <footer class="mastfoot bg-secondary text-center">
         <div class="inner">
           <p class="footer-text">Created by TrialAndError. &copy; 2024</p>
         </div>
       </footer>
     </div>
   </body>
-</html>
+</html> 

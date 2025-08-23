@@ -1,0 +1,50 @@
+{{define "snake-sense"}}
+  <div class="col-12">
+    <div class="personal-project-image image-right">
+      <img
+        alt="Snake image representing the Snake Sense application"
+        src="/images/snake-sense.webp"
+        class="img-fluid m-4"
+      />
+      <a
+        class="btn btn-dark view-link"
+        href="https://github.com/TrialAndErrror/SnakeSense"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <img
+          src="static/images/github-mark/github-mark-white.svg"
+          alt="GitHub logo icon"
+          class="me-2 github-logo"
+        />
+        View on Github
+      </a>
+
+    </div>
+
+    <div class="personal-project-text">
+      <h3>Snake Sense</h3>
+      <p>
+        Snake Sense is a python-based sentiment analysis project built on Spacy and TextBlob.
+        The goal of this project was to learn how to use Spacy and TextBlob. I started by using
+        the tools to analyze Yelp reviews to be able to determine overall sentiment of the reviews.
+        I used the tools to assign an overall score of the restaurant based on the sentiment. 
+        Next, my plan was to connect to the Google Maps API to get the latitude and longitude of the restaurant,
+        and then calculate driving distance from a user's current location. I would then use the distance to assign
+        a score to the restaurant based on how far away it is from the user. Finally, I would combine the distance
+        score with the sentiment score to assign a final overall score to the restaurant, and then rank the restaurants
+        based on their overall score in order to help users to find restaurants that were either close by, or had a good  
+        overall sentiment score and would be worth the drive.
+      </p>
+      <p>
+        The project was started during a lab day when I worked at Lofty Labs, and so I had only 8 hours to complete the project.
+        Unfortunately, I was unable to complete the project due to these time constraints. However, I learned a lot about
+        sentiment analysis and how to use Spacy and TextBlob, and was able to at least get the sentiment analysis working. I used it
+        to rank restaurants that served fried chicken in the Arkansas area, and presented the results to the team. Because my team were 
+        all native residents of Arkansas, they all had their own opinions about which restaurants were the best, but they were able to
+        validate my methodology and confirm that I had identified some of the most popular fried chicken restaurants in the area, without 
+        having visited the area myself, which I consider to be a success. Since starting the project, I have attempted to continue working on it,
+        but because of changes to the Yelp API and Google Maps API, I have encountered more challenges than I had initially anticipated.
+    </div>
+  </div>
+{{end}} 
