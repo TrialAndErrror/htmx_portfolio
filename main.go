@@ -198,7 +198,7 @@ func discoverPages() map[string]PageConfig {
 
 func copyStaticAssets() error {
 	// Copy static directory to dist/static
-	return copyDir("static", "dist/")
+	return copyDir("static", "dist/static")
 }
 
 func copyDir(src, dst string) error {
@@ -259,11 +259,33 @@ func startServer(port string) {
 	log.Printf("Serving from dist/ directory")
 	log.Printf("Press Ctrl+C to stop")
 
-	// Create file server for dist directory
+	// Create custom file server with proper MIME types
 	fs := http.FileServer(http.Dir("dist"))
 
+	// Wrap the file server to set proper MIME types
+	handler := http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		// Set proper MIME types for CSS files
+		if strings.HasSuffix(r.URL.Path, ".css") {
+			w.Header().Set("Content-Type", "text/css; charset=utf-8")
+		}
+		// Set proper MIME types for JS files
+		if strings.HasSuffix(r.URL.Path, ".js") {
+			w.Header().Set("Content-Type", "application/javascript; charset=utf-8")
+		}
+		// Set proper MIME types for webp images
+		if strings.HasSuffix(r.URL.Path, ".webp") {
+			w.Header().Set("Content-Type", "image/webp")
+		}
+		// Set proper MIME types for SVG files
+		if strings.HasSuffix(r.URL.Path, ".svg") {
+			w.Header().Set("Content-Type", "image/svg+xml")
+		}
+
+		fs.ServeHTTP(w, r)
+	})
+
 	// Start server
-	if err := http.ListenAndServe(fmt.Sprintf(":%s", port), fs); err != nil {
+	if err := http.ListenAndServe(fmt.Sprintf(":%s", port), handler); err != nil {
 		log.Fatal("Server error:", err)
 	}
 }
