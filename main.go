@@ -174,8 +174,34 @@ func discoverPages() map[string]PageConfig {
 }
 
 func copyStaticAssets() error {
-	// Copy static directory to dist/static
-	return copyDir("static", "dist/static")
+	// Copy static directory to dist/static for CSS/JS/Images
+	if err := copyDir("static", "dist/static"); err != nil {
+		return err
+	}
+
+	// Copy images directory to dist/images for images referenced as /images/
+	if err := copyDir("static/images", "dist/images"); err != nil {
+		log.Printf("Warning: Could not copy images to dist/images: %v", err)
+	}
+
+	// Copy favicon and manifest files to dist/ root
+	faviconFiles := []string{
+		"static/favicon.ico",
+		"static/favicon-16x16.png",
+		"static/favicon-32x32.png",
+		"static/apple-touch-icon.png",
+		"static/android-chrome-192x192.png",
+		"static/android-chrome-512x512.png",
+		"static/site.webmanifest",
+	}
+
+	for _, file := range faviconFiles {
+		if err := copyFile(file, "dist/"+filepath.Base(file)); err != nil {
+			log.Printf("Warning: Could not copy %s: %v", file, err)
+		}
+	}
+
+	return nil
 }
 
 func copyDir(src, dst string) error {
