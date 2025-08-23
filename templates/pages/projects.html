@@ -4,20 +4,16 @@
 
   <h2 class="mb-4 mb-md-5">Professional Projects</h2>
 
-  {{template "cmg-inventory" .}}
-
-  {{template "pals-haven" .}}
+  {{template "cmg-inventory" .}} {{template "pals-haven" .}}
 
   <h2 class="m-5 mx-md-0">Personal Projects</h2>
-
-  {{template "flask-microservices" .}}
-
-  {{template "money-manager" .}}
-
-  {{template "cat-face-detector" .}}
-
-  {{template "tne-assistant" .}}
-
-  {{template "fetcher" .}}
+  <div class="row">
+    {{template "flask-microservices" .}}
+    {{template "money-manager" .}}
+    {{template "cat-face-detector" .}} 
+    {{template "tne-assistant" .}} 
+    {{template "fetcher" .}}
+    {{template "tne-assistant" .}} 
+  </div>
 </main>
-{{end}} 
+{{end}}
