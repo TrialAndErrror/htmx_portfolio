@@ -41,9 +41,9 @@ clean:
 watch:
 	@echo "👀 Watching for changes... (Ctrl+C to stop)"
 	@if command -v fswatch >/dev/null 2>&1; then \
-		fswatch -o templates/ main.go static/ pages/  | xargs -n1 -I{} make build; \
+		fswatch -o templates/ main.go static/ | xargs -n1 -I{} make build; \
 	elif command -v inotifywait >/dev/null 2>&1; then \
-		while inotifywait -r -e modify templates/ main.go static/ pages/; do \
+		while inotifywait -r -e modify templates/ main.go static/ ;do \
 			make build; \
 		done; \
 	else \
